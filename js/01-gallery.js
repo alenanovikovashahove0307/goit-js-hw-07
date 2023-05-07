@@ -9,7 +9,7 @@ const imgEl = galleryItems
   .join("");
 
 list.insertAdjacentHTML("beforeend", imgEl);
-galleryUl.addEventListener("click", onGalleryItemClick);
+list.addEventListener("click", onGalleryItemClick);
 function onGalleryItemClick(event) {
     // if (event.target.nodeName !=="IMG") {
     //     return
