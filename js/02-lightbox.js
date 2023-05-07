@@ -9,7 +9,7 @@ const imgEl = galleryItems
   .join("");
 
 list.insertAdjacentHTML("beforeend", imgEl);
-const lightbox = new SimpleLightbox(".gallery", {
+const lightbox = new SimpleLightbox(".gallery a", {
   captionsData: "alt",
   captionPosition: "bottom",
   captionDelay: 250,
