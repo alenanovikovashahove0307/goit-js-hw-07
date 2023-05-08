@@ -11,9 +11,9 @@ const imgEl = galleryItems
 list.insertAdjacentHTML("beforeend", imgEl);
 list.addEventListener("click", onGalleryItemClick);
 function onGalleryItemClick(event) {
-    // if (event.target.nodeName !=="IMG") {
-    //     return
-    // }
+    if (event.target.nodeName !=="IMG") {
+        return
+    }
   event.preventDefault();
   const instance = basicLightbox.create(
     ` <div class="modal">
@@ -25,18 +25,6 @@ function onGalleryItemClick(event) {
   modalElement.addEventListener("click", () => {
     instance.close();
   });
-  //   const escapePress = basicLightbox.create(html, {
-  //    onShow: () => {
-  //     window.addEventListener("keydown", onModalKeyDown);   
-  //   },
-  //    onClose: () => {
-  //     window.removeEventListener("keydown", onModalKeyDown);
-  //   },
-  // })
-  // function onModalKeyDown(event) {
-  //   if (event.code === "Escape") {
-  //     instance.close();
-  //   }
-  // }
+  
 }
 console.log(galleryItems);
